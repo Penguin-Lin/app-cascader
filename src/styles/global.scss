@@ -1,0 +1,16 @@
+.default-button {
+  padding: 0;
+  background-color: transparent;
+  -webkit-tap-highlight-color: transparent;
+  line-height: inherit;
+  box-sizing: border-box;
+  text-decoration: none;
+  &::after {
+    border: none
+  }
+}
+
+// 全局隐藏滚动条
+::-webkit-scrollbar{
+  display: none;
+}

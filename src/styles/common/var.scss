@@ -1,0 +1,104 @@
+@use "sass:map";
+@use "sass:math";
+
+// types
+$types: primary, info, success;
+
+// Color
+$colors: () !default;
+$colors: map.deep-merge(
+  (
+    "white": #ffffff,
+    "black": #000000,
+    "primary": (
+      "base": #447ffa,
+    ),
+    "info": (
+      "base": #909399,
+    ),
+    "success": (
+      "base": #67c23a,
+    ),
+  ),
+  $colors
+);
+
+$color-white: map.get($colors, "white") !default;
+$color-black: map.get($colors, "black") !default;
+$color-info: map.get($colors, "info", "base") !default;
+
+// https://sass-lang.com/documentation/values/maps#immutability
+// mix colors with white/black to generate light/dark level
+@mixin set-color-mix-level($type, $number, $mode: "light", $mix-color: $color-white) {
+  $colors: map.deep-merge(
+    (
+      $type: (
+        "#{$mode}-#{$number}":
+          mix($mix-color, map.get($colors, $type, "base"), math.percentage(math.div($number, 10))),
+      ),
+    ),
+    $colors
+  ) !global;
+}
+
+// $colors.primary.light-i
+// --el-color-primary-light-i
+// 10% 53a8ff
+// 20% 66b1ff
+// 30% 79bbff
+// 40% 8cc5ff
+// 50% a0cfff
+// 60% b3d8ff
+// 70% c6e2ff
+// 80% d9ecff
+// 90% ecf5ff
+@each $type in $types {
+  @for $i from 1 through 9 {
+    @include set-color-mix-level($type, $i, "light", $color-white);
+  }
+}
+
+// --el-color-primary-dark-2
+@each $type in $types {
+  @include set-color-mix-level($type, 2, "dark", $color-black);
+}
+
+// bg-color
+$bg-color: () !default;
+$bg-color: map.deep-merge(
+  (
+    "": #ffffff,
+    "info": #fff8d5,
+  ),
+  $bg-color
+);
+
+// transition
+$transition-duration: () !default;
+$transition-duration: map.merge(
+  (
+    "": 0.3s,
+    "fast": 0.2s,
+  ),
+  $transition-duration
+);
+
+$color: () !default;
+$color-g0: white;
+$color-brand: red;
+
+@mixin set-color-mix-num($symbol, $type, $number) {
+  $color:  map.deep-merge((
+    $symbol: (
+      "#{$type}-#{$number}": mix($color-g0, $color-brand, math.percentage(math.div($number, 10))),
+    ),
+  ), $color) !global;
+}
+
+@for $i from 1 through 9 {
+  @include set-color-mix-num('brand', 'dark', $i);
+}
+
+:root {
+  // --test: map.get($colors, "primary", "light-3");
+}

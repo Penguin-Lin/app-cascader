@@ -1,0 +1,19 @@
+@use '@/styles/mixins/mixins.scss' as *;
+
+
+@include b(cascader) {
+
+}
+
+@include b(cascader-popup) {
+  @include e(wrap) {
+    height: 100%;
+    padding: 0 20px;
+  }
+
+  @include e(choosen-text) {
+    color: #a8abb2;
+    font-size: 13px;
+    margin: 0 7px;
+  }
+}

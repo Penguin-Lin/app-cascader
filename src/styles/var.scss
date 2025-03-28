@@ -1,0 +1,32 @@
+
+
+// CSS3 var
+@use 'common/var' as *;
+@use 'mixins/_var' as *;
+@use 'mixins/mixins' as *;
+
+// common
+:root, page {
+  @include set-css-var-value('color-white', $color-white);
+  @include set-css-var-value('color-black', $color-black);
+
+  // bg-color
+  @include set-component-css-var('bg-color', $bg-color);
+
+  // Transition
+  @include set-component-css-var('transition-duration', $transition-duration);
+}
+
+// for light
+:root, page {
+  // --el-color-#{$type}
+  // --el-color-#{$type}-light-{$i}
+  @each $type in (primary, info) {
+    @include set-css-color-type($colors, $type);
+  }
+}
+
+// for extend component
+:root, page {
+
+}

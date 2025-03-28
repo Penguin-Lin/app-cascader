@@ -1,0 +1,23 @@
+@use 'sass:map';
+
+@use '@/styles/mixins/mixins.scss' as *;
+
+$cascader: () !default;
+$cascader: map.merge(
+  (
+    'menu-text-color': #606266,
+    'menu-selected-text-color': getCssVar('color-primary'),
+    'menu-fill': #ffffff,
+    'menu-font-size': 14px,
+    'menu-radius': 4px,
+    'menu-border': #e4e7ed,
+    'menu-shadow': 0px 0px 12px rgba(0, 0, 0, .12),
+    'node-background': #F7F7F7,
+    'node-background-selected': #FFFFFF,
+    'node-background-hover': #f5f7fa,
+    'node-color-disabled': #a8abb2,
+    'color-empty': #a8abb2,
+    'tag-background': #f0f2f5,
+  ),
+  $cascader
+);
