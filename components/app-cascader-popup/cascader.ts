@@ -2,11 +2,11 @@ import {
   popupProps as commonPopupProps,
   popupEmits as commonPopupEmits,
 } from "@/components/AppPopup/popup";
-import { CommonProps as commonCascaderProps } from "@/components/AppCascaderPanel/index";
+import { CommonProps as commonCascaderProps } from "@/components/app-cascader-panel/index";
 import { UPDATE_MODEL_EVENT, CHANGE_EVENT } from "@/constants";
 import { isBoolean } from "@shuzhi-utils/is";
 
-import type { CascaderNode, CascaderValue } from "@/components/AppCascaderPanel/index";
+import type { CascaderNode, CascaderValue } from "@/components/app-cascader-panel/index";
 // import type {} from "@/components/AppPopup/popup";
 
 export const cascaderProps = {

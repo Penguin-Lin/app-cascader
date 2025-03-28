@@ -73,7 +73,7 @@ export default {
 import "./style/cascader.scss";
 
 import AppPopup from "@/components/AppPopup/index.vue";
-import AppCascaderPanel from "@/components/AppCascaderPanel/index.vue";
+import app-cascader-panel from "@/components/app-cascader-panel/index.vue";
 import { cascaderPopupProps, cascaderPopupEmits } from "./cascader";
 import { useCascaderPopup } from "./composables/index";
 import { useNamespace } from "@/hooks";

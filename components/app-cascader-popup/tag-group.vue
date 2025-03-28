@@ -76,12 +76,12 @@ import AppCascaderPopup from "./popup.vue";
 import { useNamespace } from "@/hooks/use-namespace";
 
 import { cascaderPopupProps, cascaderPopupEmits } from "./cascader";
-import { DefaultProps } from "../AppCascaderPanel";
-import { generateId } from "../AppCascaderPanel/utils";
+import { DefaultProps } from "../app-cascader-panel";
+import { generateId } from "../app-cascader-panel/utils";
 import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from "@/constants";
 import { PropType } from "vue";
 import { getElementClientRect } from "@/utils/utils";
-import type { CascaderProps } from "../AppCascaderPanel";
+import type { CascaderProps } from "../app-cascader-panel";
 import type { CascaderPopupInstance } from "./instance";
 
 const ns = useNamespace("tag-group");

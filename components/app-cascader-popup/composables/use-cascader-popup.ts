@@ -3,7 +3,7 @@ import { UPDATE_MODEL_EVENT } from "@/constants";
 import { castArray, unique } from "@/utils/arrays";
 import { isArray, isNumber } from "@shuzhi-utils/is";
 import type { CascaderPopupProps, CascaderPopupEmits } from "../cascader";
-import type { CascaderValue, CascaderNode, Tag } from "@/components/AppCascaderPanel/index";
+import type { CascaderValue, CascaderNode, Tag } from "@/components/app-cascader-panel/index";
 
 import { useCascader } from "./use-cascader";
 

@@ -8,7 +8,7 @@ import type {
   CascaderValue,
   CascaderStore,
   Tag,
-} from "@/components/AppCascaderPanel/index";
+} from "@/components/app-cascader-panel/index";
 
 export const useTagGroup = (
   props: CascaderPopupProps,

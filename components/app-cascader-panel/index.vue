@@ -15,7 +15,7 @@
 <script lang="ts">
 export default {
   options: {
-    name: "AppCascaderPanel",
+    name: "app-cascader-panel",
     styleIsolation: "shared", // 解除样式隔离
     // #ifdef MP-WEIXIN
     // 将自定义节点设置成虚拟的（去掉自定义组件包裹层），更加接近Vue组件的表现，能更好的使用flex属性

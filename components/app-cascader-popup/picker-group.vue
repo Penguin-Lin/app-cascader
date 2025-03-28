@@ -66,11 +66,11 @@ import AppCascaderPopup from "./popup.vue";
 import { useNamespace } from "@/hooks/use-namespace";
 
 import { cascaderPopupProps, cascaderPopupEmits } from "./cascader";
-import { DefaultProps } from "../AppCascaderPanel";
+import { DefaultProps } from "../app-cascader-panel";
 import { usePickerGroup } from "./composables";
 import { PropType } from "vue";
 import type { PropsType as PickerPropsType } from "../AppPicker/pickerData";
-import type { CascaderOption, CascaderProps } from "../AppCascaderPanel";
+import type { CascaderOption, CascaderProps } from "../app-cascader-panel";
 
 const ns = useNamespace("picker-group");
 

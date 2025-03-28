@@ -12,7 +12,7 @@
 </template>
 
 <script lang="ts" setup>
-import type { CascaderNode } from "@/components/AppCascaderPanel/index";
+import type { CascaderNode } from "@/components/app-cascader-panel/index";
 
 const appCascaderPopupShow = ref(false);
 

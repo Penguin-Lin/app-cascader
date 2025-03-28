@@ -7,7 +7,7 @@ import type {
   CascaderValue,
   CascaderStore,
   Tag,
-} from "@/components/AppCascaderPanel/index";
+} from "@/components/app-cascader-panel/index";
 import { cloneDeep } from "lodash-es";
 
 export const useCascader = (props: CascaderProps, emit: SetupContext<CascaderEmits>["emit"]) => {

@@ -1,4 +1,4 @@
-# app-cascader
+# app-cascader-popup
 
 本组件仿照element-plus的级联选择器实现，具体的props可参照（另外新增`dominant`属性，具体表现是：当`checkStrictly === false` 且 `dominant === true`时，子级全部勾选的情况下，父级的值可直接涵盖子级的值，无需同`element-plus`一样父级值与子级值一同返回）
 
